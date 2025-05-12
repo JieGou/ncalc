@@ -155,6 +155,8 @@ public class LambdaTests
     [Fact]
     public void ShouldHandleParameters()
     {
+        // Reference https://ncalc.github.io/ncalc/articles/operators.html#equality-and-inequality-operators
+        // =, == : Equal to
         var expression = new Expression("[FieldA] > 5 && [FieldB] = 'test'");
         var sut = expression.ToLambda<Context, bool>();
         var context = new Context { FieldA = 7, FieldB = "test" };
